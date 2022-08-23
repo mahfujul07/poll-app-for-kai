@@ -33,7 +33,7 @@ const Poll = (props) => {
   const [index, setIndex] = useState(-1);
   const handleURL = () => {
     navigator.clipboard.writeText(
-      "https://insta-poll-72ce3.web.app/" + poll.id
+      "https://poll-app-kai.netlify.app/" + poll.id
     );
     toast.success("URL copied to clipboard");
   };
