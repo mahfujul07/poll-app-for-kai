@@ -264,7 +264,7 @@ const Poll = (props) => {
         </FacebookShareButton> */}
         {/* <br /> */}
         <Input
-          value={`https://insta-poll-72ce3.web.app/${poll.id}`}
+          value={`https://poll-app-kai.netlify.app/${poll.id}`}
           style={{ width: "15rem" }}
           disabled
         />
@@ -281,7 +281,7 @@ const Poll = (props) => {
           style={{ textAlign: "center" }}
         >
           <QRCode
-            value={`https://insta-poll-72ce3.web.app/${poll.id}`}
+            value={`https://poll-app-kai.netlify.app/${poll.id}`}
             style={{ height: "12rem", width: "12rem" }}
           />
         </Modal>
