@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import Poll from "./Pages/Poll";
@@ -18,8 +17,7 @@ function App() {
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/not_found" component={Not_found} />
             <PrivateRoute exact path="/:id" component={Poll} />
-
-            <Route path="*" exact={true} component={Not_found} />
+            <Route path="*" exact={false} component={Not_found} />
           </Switch>
           <Footer />
         </Router>

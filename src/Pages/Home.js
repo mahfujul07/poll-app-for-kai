@@ -127,7 +127,7 @@ export const Home = (props) => {
       title: "",
       count: 0,
     };
-    if (options.length == 4) toast.warning("Maximum 4 options allowed");
+    if (options.length == 6) toast.warning("Maximum 6 options allowed");
     else setOptions([...options, option]);
   };
 
@@ -237,13 +237,13 @@ export const Home = (props) => {
                 onClick={handleSubmit}
               >
                 {" "}
-                Generate Poll 🚀
+                Create Poll
               </Button>
             )}
           </div>
           <div style={{ flexGrow: "1" }}>
             <img
-              src="https://image.freepik.com/free-vector/costumer-survey-concept-illustration_114360-459.jpg"
+              src="https://thumbs.dreamstime.com/b/finger-poll-finger-poll-icon-155550346.jpg"
               className="home_img animate__animated animate__fadeIn"
             />
           </div>

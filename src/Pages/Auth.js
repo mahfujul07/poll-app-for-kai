@@ -7,7 +7,7 @@ import 'firebase/auth'
 import '../App.css'
 import {UserSession} from '../firebase/UserProvider'
 import Loader from '../Loader.gif';
-import Vote from '../vote.jpg'
+import Vote from '../vote.webp'
 
 const GoogleAuth = (props) => {
     const {user, loading} = UserSession();
