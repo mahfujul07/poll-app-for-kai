@@ -14,10 +14,11 @@ function App() {
       <UserProvider>
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/not_found" component={Not_found} />
-            <Route exact path="/:id" component={Poll} />
+            <PrivateRoute exact path="/:id" component={Poll} />
+
             <Route path="*" exact={true} component={Not_found} />
           </Switch>
           <Footer />
