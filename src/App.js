@@ -14,7 +14,7 @@ function App() {
       <UserProvider>
         <Router>
           <Switch>
-            <PrivateRoute exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/not_found" component={Not_found} />
             <Route exact path="/:id" component={Poll} />
