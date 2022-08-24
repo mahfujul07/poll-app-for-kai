@@ -38,21 +38,26 @@
 .heading1 {
   font-size: 2.6rem;
   color: #174dce;
-  text-shadow: 2px 2px #17a1ce;
+  /* text-shadow: 2px 2px #17a1ce; */
   text-align: center;
 }
 
 .title {
-  width: 90% !important;
-  border-radius: 10px !important;
+  width: 85% !important;
+  border-radius: 5px !important;
   text-align: center !important;
   border: 0px solid blue !important;
   padding-top: 0.8rem !important;
   overflow: hidden !important;
   font-family: Mulish !important;
-  box-shadow: 5px 5px 8px #888888 !important;
+  box-shadow: 3px 3px 5px #888888 !important;
   font-size: 1.2rem !important;
   transition: width 0.3s ease-in !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+  margin-left: 65px !important;
 }
 
 .options {
@@ -74,8 +79,12 @@
 }
 
 .submit {
-  transition: top 1s;
-  margin-bottom: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 25%;
+  width: 100px;
+
 }
 
 .switch_div {
@@ -238,13 +247,14 @@
   width: 100%;
   text-align: center;
   flex: none;
-  position: sticky;
-  top: 100%;
+  position: absolute;
+  margin-top: 100%;
   font-size: 0.9rem;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: Mulish;
   align-items: center;
+  bottom: 0;
 }
 
 .not_found {
@@ -279,8 +289,23 @@
   margin-top: 10rem;
   font-family: Mulish;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 40px;
 }
 
 .login_btn {
   width: 18rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: 1px solid #009ffd;
+  background-color: #009ffd;
+  color: #fff;
+  font-family: Mulish;
+  font-weight: 600;
+  margin: 1rem;
+  transition: transform 0.3s ease-in;
+  -webkit-box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
 }

@@ -127,7 +127,7 @@ export const Home = (props) => {
       title: "",
       count: 0,
     };
-    if (options.length == 6) toast.warning("Maximum 6 options allowed");
+    if (options.length == 4) toast.warning("Maximum 4 options allowed");
     else setOptions([...options, option]);
   };
 
@@ -144,7 +144,7 @@ export const Home = (props) => {
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <div className="logout_grid">
           <div>
-            <h1 className="animate__animated animate__pulse heading">
+            <h1 className="animate__animated animate__pulse heading1">
               Create A Poll
             </h1>
           </div>
