@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { firestore } from "../firebase/config";
-import { HorizontalBar, Pie, Bar } from "react-chartjs-2";
-import { Typography, Input, Button, Switch, Modal } from "antd";
+import { HorizontalBar  } from "react-chartjs-2";
+import { Input, Button, Modal } from "antd";
 import { updatePoll } from "../firebase/polls";
 import { Link } from "react-router-dom";
 import { ShareAltOutlined, LogoutOutlined } from "@ant-design/icons";
@@ -11,14 +11,14 @@ import QRCode from "qrcode.react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "../Loader.gif";
-import {
-  TwitterIcon,
-  TwitterShareButton,
-  WhatsappShareButton,
-  WhatsappIcon,
-  FacebookIcon,
-  FacebookShareButton,
-} from "react-share";
+// import {
+//   TwitterIcon,
+//   TwitterShareButton,
+//   WhatsappShareButton,
+//   WhatsappIcon,
+//   FacebookIcon,
+//   FacebookShareButton,
+// } from "react-share";
 import { UserSession } from "../firebase/UserProvider";
 
 const Poll = (props) => {
@@ -45,13 +45,13 @@ const Poll = (props) => {
     let x = poll;
     if (!x.votes[uid]) {
       x.options.forEach((option) => {
-        if (option.index == index) option.count += 1;
+        if (option.index === index) option.count += 1;
       });
-    } else if (x.votes[uid] != index) {
+    } else if (x.votes[uid] !== index) {
       x.options.forEach((option) => {
-        if (option.index == x.votes[uid]) {
+        if (option.index === x.votes[uid]) {
           option.count -= 1;
-        } else if (option.index == index) {
+        } else if (option.index === index) {
           option.count += 1;
         }
       });

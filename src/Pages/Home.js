@@ -54,14 +54,14 @@ export const Home = (props) => {
     else {
       let flag = 0;
       for (let i = 0; i < options.length; i++) {
-        if (options[i].title == "") {
+        if (options[i].title === "") {
           toast.error("Please fill all the options!");
           flag = 1;
           break;
         }
       }
-      if (flag == 0) {
-        if (title == "") {
+      if (flag === 0) {
+        if (title === "") {
           toast.error(
             "Title cannot be empty! Please provide a title for the poll."
           );
@@ -127,7 +127,7 @@ export const Home = (props) => {
       title: "",
       count: 0,
     };
-    if (options.length == 4) toast.warning("Maximum 4 options allowed");
+    if (options.length === 4) toast.warning("Maximum 4 options allowed");
     else setOptions([...options, option]);
   };
 
@@ -244,6 +244,7 @@ export const Home = (props) => {
           <div style={{ flexGrow: "1" }}>
             <img
               src="https://thumbs.dreamstime.com/b/finger-poll-finger-poll-icon-155550346.jpg"
+              alt="poll"
               className="home_img animate__animated animate__fadeIn"
             />
           </div>

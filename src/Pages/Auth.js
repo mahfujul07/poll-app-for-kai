@@ -1,7 +1,6 @@
 import { GoogleOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import { Button } from "antd";
-import { GoogleLogin } from "../firebase/googleLogin";
 import firebase from "firebase/app";
 import "firebase/auth";
 import { UserSession } from "../firebase/UserProvider";
@@ -16,18 +15,18 @@ const GoogleAuth = (props) => {
       .auth()
       .signInWithPopup(provider)
       .then(function (result) {
-        var token = result.credential.accessToken;
-        var user = result.user;
+        // var token = result.credential.accessToken;
+        // var user = result.user;
         if (props.location.state) {
           if (!props.location.state.from) props.history.push("/");
           else props.history.push(`/${props.location.state.from}`);
         } else props.history.push("/");
       })
       .catch(function (error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
+        // var email = error.email;
+        // var credential = error.credential;
       });
   };
   useEffect(() => {
@@ -37,7 +36,7 @@ const GoogleAuth = (props) => {
         else props.history.push(`/${props.location.state.from}`);
       } else props.history.push("/");
     }
-  }, [user]);
+  }, [user && props.history && props.location.state ? props.history.push : null]);
 
   return (
     <>
@@ -52,7 +51,7 @@ const GoogleAuth = (props) => {
             zIndex: "23444898429",
           }}
         >
-          <img src={Loader} />
+          <img src={Loader} alt="loader" />
         </div>
       ) : (
         <div>
@@ -76,6 +75,7 @@ const GoogleAuth = (props) => {
             <div style={{ flexGrow: "1" }}>
               <img
                 src={Vote}
+                alt="vote"
                 className="home_img1 animate__animated animate__fadeIn"
               />
             </div>

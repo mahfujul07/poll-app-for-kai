@@ -1,15 +1,24 @@
-import React from 'react'
-import {Button} from 'antd'
-import {Link} from 'react-router-dom'
-import {HomeTwoTone } from '@ant-design/icons'
+import React from "react";
+import { Button } from "antd";
+import { Link } from "react-router-dom";
+import { HomeTwoTone } from "@ant-design/icons";
 
 const Not_found = () => {
-    return (
-        <div className="not_found">
-            <img src={"https://www.flaticon.com/svg/static/icons/svg/1147/1147129.svg"} className="not_img"/>
-            <br/><Link to="/"><Button type="primary" size="large">Return <HomeTwoTone /></Button></Link>
-        </div>
-    )
-}
+  return (
+    <div className="not_found">
+      <img
+        src={"https://www.flaticon.com/svg/static/icons/svg/1147/1147129.svg"}
+        alt="not found"
+        className="not_img"
+      />
+      <br />
+      <Link to="/">
+        <Button type="primary" size="large">
+          Return <HomeTwoTone />
+        </Button>
+      </Link>
+    </div>
+  );
+};
 
-export default Not_found
+export default Not_found;

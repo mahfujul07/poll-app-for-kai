@@ -3,7 +3,7 @@ import {Route, Redirect} from 'react-router-dom'
 import {UserSession} from '../firebase/UserProvider'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-    const {user, loading} = UserSession();
+    const {user} = UserSession();
 
     return (
         <Route {...rest} render={props =>(
