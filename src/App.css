@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -44,19 +44,15 @@
 
 .title {
   width: 90% !important;
-  border-radius: 5px !important;
+  border-radius: 10px !important;
   text-align: center !important;
   border: 0px solid blue !important;
   padding-top: 0.8rem !important;
   overflow: hidden !important;
-  font-family: Silkscreen !important;
+  font-family: Mulish !important;
   box-shadow: 5px 5px 8px #888888 !important;
   font-size: 1.2rem !important;
   transition: width 0.3s ease-in !important;
-  -webkit-border-radius: 5px !important;
-  -moz-border-radius: 5px !important;
-  -ms-border-radius: 5px !important;
-  -o-border-radius: 5px !important;
 }
 
 .options {
@@ -67,7 +63,6 @@
   width: 80%;
   margin: 1rem auto;
 }
-
 .option {
   height: 3rem;
   border-radius: 5px;
@@ -103,7 +98,6 @@
   -moz-box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
 }
-
 .poll_live:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -148,7 +142,6 @@
   font-weight: 600;
   margin: 0.5rem;
 }
-
 .home_img {
   height: 25rem;
   margin: 1rem auto;
@@ -156,7 +149,6 @@
   max-width: 400px;
   min-width: 400px;
 }
-
 .home_img1 {
   height: 25rem;
   margin: 1rem auto;
@@ -183,7 +175,6 @@
 .min_wide {
   min-width: 600px;
 }
-
 .min_wide1 {
   min-width: 600px;
 }
@@ -210,7 +201,6 @@
   -moz-box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 0px 10px -2px rgba(0, 0, 0, 0.75);
 }
-
 .poll_live_expire_selected {
   font-family: Mulish;
   height: 3rem;
@@ -233,7 +223,6 @@
   width: 40%;
   height: 300px;
 }
-
 .create_btn {
   float: right;
   margin-right: 1rem;
@@ -244,7 +233,6 @@
   height: 25rem;
   margin: auto;
 }
-
 .footer {
   border-top: 2px solid rgba(0, 0, 0, 0.125);
   width: 100%;
@@ -274,8 +262,7 @@
   font-weight: 570;
   padding: 1rem;
 }
-
-.auth_div>button {
+.auth_div > button {
   margin: 1rem;
 }
 
@@ -288,7 +275,6 @@
   margin-top: 2rem;
   margin-right: 1rem;
 }
-
 .google_head {
   margin-top: 10rem;
   font-family: Mulish;
@@ -297,4 +283,4 @@
 
 .login_btn {
   width: 18rem;
-} */
+}

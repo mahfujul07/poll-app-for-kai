@@ -15,7 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { motion, AnimatePresence } from "framer-motion";
 import "antd/dist/antd.css";
 import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-import "animate.css";
+// import "animate.css";
 import "../App.css";
 import { createPoll } from "../firebase/polls";
 import { UserSession } from "../firebase/UserProvider";

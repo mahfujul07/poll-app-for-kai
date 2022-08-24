@@ -4,7 +4,6 @@ import { Button } from 'antd';
 import {GoogleLogin} from '../firebase/googleLogin'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import '../App.css'
 import {UserSession} from '../firebase/UserProvider'
 import Loader from '../Loader.gif';
 import Vote from '../vote.webp'
@@ -69,7 +68,7 @@ const GoogleAuth = (props) => {
             <div className="flex_home">
               <div style={{flexGrow:"1"}} className="min_wide">
                 <h1 className="google_head">Login to get Started!</h1>
-            <Button type="primary" size="large" style={{backgroundColor:"#dd4b39"}} onClick={handleLogin} className="login_btn"><GoogleOutlined />Log in with Google</Button>
+            <Button type="primary" size="large" style={{backgroundColor:"blue"}} onClick={handleLogin} className="login_btn"><GoogleOutlined />Log in with Google</Button>
             </div>
             <div style={{flexGrow:"1"}}>
         <img 

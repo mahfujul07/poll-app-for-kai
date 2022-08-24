@@ -9,7 +9,7 @@ import PrivateRoute from "./Pages/PrivateRoute";
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-center">
       <UserProvider>
         <Router>
           <Switch>
