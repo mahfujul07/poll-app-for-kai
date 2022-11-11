@@ -1,8 +1,8 @@
 import { GoogleOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import { Button } from "antd";
-import firebase from "firebase/app";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 import { UserSession } from "../firebase/UserProvider";
 import Loader from "../Loader.gif";
 import Vote from "../vote.webp";
@@ -36,7 +36,9 @@ const GoogleAuth = (props) => {
         else props.history.push(`/${props.location.state.from}`);
       } else props.history.push("/");
     }
-  }, [user && props.history && props.location.state ? props.history.push : null]);
+  }, [
+    user && props.history && props.location.state ? props.history.push : null,
+  ]);
 
   return (
     <>

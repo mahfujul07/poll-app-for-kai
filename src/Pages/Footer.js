@@ -7,7 +7,7 @@ const Footer = () => {
         Made with <HeartTwoTone twoToneColor="#eb2f96" /> By{" "}
         <a href="https://mahfujulhuq.tk/">Mahfuz </a>For{" "}
         <a href="https://discord.gg/SGvtVy5jQC">Kai</a>
-      </div>      
+      </div>
     </footer>
   );
 };

@@ -13,7 +13,7 @@
     "antd": "^4.7.3",
     "chart.js": "^2.9.4",
     "date-fns": "^2.16.1",
-    "firebase": "^8.0.0",
+    "firebase": "^9.9.3",
     "framer-motion": "^2.9.4",
     "material-ui": "^0.20.2",
     "qrcode.react": "^1.0.0",
@@ -51,7 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }

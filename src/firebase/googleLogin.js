@@ -1,5 +1,5 @@
-import firebase from "firebase";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
 export const GoogleLogin = () => {
   var provider = new firebase.auth.GoogleAuthProvider();

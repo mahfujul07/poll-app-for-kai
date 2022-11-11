@@ -9,13 +9,13 @@ import DateFnsUtils from "@date-io/date-fns";
 import "../mobile.css";
 import { ToastContainer, toast } from "react-toastify";
 import shortid from "shortid";
-import firebase from "firebase/app";
+import firebase from "firebase/compat/app";
 import "firebase/auth";
 import "react-toastify/dist/ReactToastify.css";
 import { motion, AnimatePresence } from "framer-motion";
 import "antd/dist/antd.css";
 import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-// import "animate.css";
+import "animate.css";
 import "../App.css";
 import { createPoll } from "../firebase/polls";
 import { UserSession } from "../firebase/UserProvider";
@@ -31,7 +31,6 @@ export const Home = (props) => {
   };
   const { TextArea } = Input;
   const [check, setCheck] = useState(false);
-
   const [options, setOptions] = useState([
     {
       index: 1,
@@ -88,15 +87,15 @@ export const Home = (props) => {
       }
     }
   };
-  const fadeEffect = {
-    exit: {
-      opacity: 0,
-      x: -300,
-      transition: {
-        duration: 5,
-      },
-    },
-  };
+  // const fadeEffect = {
+  //   exit: {
+  //     opacity: 0,
+  //     x: -300,
+  //     transition: {
+  //       duration: 5,
+  //     },
+  //   },
+  // };
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -171,7 +170,6 @@ export const Home = (props) => {
             />
             <br />
             <br />
-            
             <AnimatePresence>
               {!options.length
                 ? null

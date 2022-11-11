@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { firestore } from "../firebase/config";
-import { HorizontalBar  } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 import { Input, Button, Modal } from "antd";
 import { updatePoll } from "../firebase/polls";
 import { Link } from "react-router-dom";
 import { ShareAltOutlined, LogoutOutlined } from "@ant-design/icons";
-import firebase from "firebase/app";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 import QRCode from "qrcode.react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -93,7 +93,7 @@ const Poll = (props) => {
     });
   }, []);
 
-  const shareUrl = "http://github.com";
+  // const shareUrl = "http://github.com";
   const data = {
     labels: label,
     datasets: [
@@ -166,7 +166,7 @@ const Poll = (props) => {
           zIndex: "23444898429",
         }}
       >
-        <img src={Loader} />
+        <img src={Loader} alt="loader" />
       </div>
     );
   return (
@@ -200,7 +200,7 @@ const Poll = (props) => {
           )}
           {expiry
             ? poll.options.map((option) => {
-                if (option.index != index)
+                if (option.index !== index)
                   return <div className="poll_live_expire">{option.title}</div>;
                 else
                   return (
@@ -210,7 +210,7 @@ const Poll = (props) => {
                   );
               })
             : poll.options.map((option) => {
-                if (option.index != index)
+                if (option.index !== index)
                   return (
                     <div
                       className="poll_live"
@@ -230,7 +230,7 @@ const Poll = (props) => {
                   );
               })}
         </div>
-        {index != -1 && (
+        {index !== -1 && (
           <div className="graph animate__animated animate__fadeInRight">
             <HorizontalBar data={data} options={options} />
           </div>
